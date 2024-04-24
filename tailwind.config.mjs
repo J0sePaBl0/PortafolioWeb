@@ -6,7 +6,9 @@ export default {
 	theme: {
 			
 			extend: {
-			
+				maxWidth: {
+					'mdd': '30rem',
+				  }
 			}
 	},
 	plugins: [
@@ -15,6 +17,8 @@ export default {
 	 theme: {
 		colors: {
 		'verdeagua': '#269F87',
+		'grisoscuro': '#1A1A1A',
+
 		},
     container: {
       padding: '2rem',
