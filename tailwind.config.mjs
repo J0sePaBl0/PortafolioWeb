@@ -17,8 +17,8 @@ export default {
 	 theme: {
 		colors: {
 		'verdeagua': '#269F87',
-		'grisoscuro': '#1A1A1A',
-
+		'secundario': '#3C3C3B',
+		'grisoscuro': '#1A1E1D',
 		},
     container: {
       padding: '2rem',

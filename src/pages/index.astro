@@ -4,23 +4,31 @@ import SeccionPrincipal from '../components/SeccionPrincipal.astro';
 import SobreMi from '../components/SobreMi.astro';
 import Experiencia from '../components/Experiencia.astro';
 import Formulario from '../components/Formulario.astro';
+import Proyectos from '../components/Proyectos.astro';
+import Habilidades from '../components/Habilidades.astro';
 ---
 
 <Layout title="Mi portafolio :}">
 	
 	
 	<SeccionPrincipal></SeccionPrincipal>
-	<div class="max-w-6xl flex justify-center flex-col">
-	<SobreMi></SobreMi>
+	<div >
+		<SobreMi></SobreMi>
 	</div>
-	<div class="max-w-6xl flex justify-center flex-col">
-	<Experiencia></Experiencia>
+	<div >
+		<Experiencia></Experiencia>
 	</div>
-	<div class="max-w-6xl mt-32 mb-40 max-h-4xl">
-	<Formulario></Formulario>
+	<div class="mt-52">
+		<Habilidades></Habilidades>
+	</div>
+	<div class="mt-52">
+		<Proyectos></Proyectos>
+	</div>
+	<div class="">
+		<Formulario></Formulario>
 	</div>
 	</main>
-	</Layout>
+</Layout>
 
 <style>
 	main {
