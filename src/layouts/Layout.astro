@@ -24,12 +24,32 @@ import WhatsappBubble from '../components/WhatsappBubble.astro';
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
+		
 	</head>
 	<body>
 		<Header></Header>	
 		<div class="max-w-6xl pt-32 mx-auto flex justify-center flex-col">
 		<slot />
 		</div>
+		<script type="text/javascript">
+			document.addEventListener("DOMContentLoaded", function () {
+			  const switchButton = document.getElementById('language-toggle');
+			  const elementsToTranslate = document.querySelectorAll('[data-translate]');
+		
+			  if (switchButton) {
+				switchButton.addEventListener('change', function () {
+				  const lang = switchButton.checked ? 'en' : 'es'; // 'es' para español, 'en' para inglés
+		
+				  elementsToTranslate.forEach((element) => {
+					const text = element.getAttribute(`data-${lang}`);
+					if (text) {
+					  element.textContent = text; // Actualiza el contenido dinámicamente
+					}
+				  });
+				});
+			  }
+			});
+		  </script>
 		<WhatsappBubble></WhatsappBubble>
 	</body>
 </html>
