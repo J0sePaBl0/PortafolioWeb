@@ -46,9 +46,19 @@ import WhatsappBubble from '../components/WhatsappBubble.astro';
 					  element.textContent = text; // Actualiza el contenido dinámicamente
 					}
 				  });
+				  translatePlaceholders(lang);
 				});
 			  }
+			  function translatePlaceholders(language) {
+    			const inputs = document.querySelectorAll('input[data-translate]');
+
+    			inputs.forEach(input => {
+      			const placeholderText = input.getAttribute(`data-${language}`);
+      			input.placeholder = placeholderText;
+   			 	});
+  			}
 			});
+			
 		  </script>
 		<WhatsappBubble></WhatsappBubble>
 	</body>
