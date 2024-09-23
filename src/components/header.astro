@@ -1,22 +1,25 @@
 ---
 import TranslateButton from "./TranslateButton.astro"
 ---
-<nav class="absolute w-full">
-    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-        <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+
+<nav class="absolute w-full z-50">
+    <div class="max-w-screen-xl flex flex-nowrap items-center justify-center mx-auto p-4">
+        <a href="#" class="flex items-center p-10">
             <img src="/favicon.svg" class="h-12" alt="favicon" />
             <span class="self-center text-1xl font-semibold whitespace-nowrap"></span>
         </a>
-        <div class="flex items-center md:order-2 space-x-1 md:space-x-0 rtl:space-x-reverse">
-            <button data-collapse-toggle="navbar-language" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-language" aria-expanded="false">
-                <span class="sr-only">Open main menu</span>
-                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+        <!-- Mobile menu button -->
+        <div class="flex items-center md:hidden space-x-1 rtl:space-x-reverse">
+            <button type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" id="mobile-menu-button">
+                <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                 </svg>
             </button>
         </div>
-        <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-language">
-            <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+
+        <!-- Desktop navigation links -->
+        <div class="hidden items-center justify-between w-full md:flex md:w-auto" id="desktop-navbar">
+            <ul class="flex flex-col font-medium p-4 md:flex-row md:space-x-8 rtl:space-x-reverse md:p-0 mt-4 border md:mt-0 md:border-0 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
                 <li>
                     <a href="#" class="block py-2 px-3 text-white bg-secundario rounded md:bg-transparent md:text-verdeagua md:p-0 md:dark:text-blue-500" aria-current="page" data-translate data-en="Home" data-es="Inicio">Inicio</a>
                 </li>
@@ -36,7 +39,44 @@ import TranslateButton from "./TranslateButton.astro"
                     <a href="#Contacto" class="block py-2 px-3 md:p-0 text-white-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-verdeagua dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700" data-translate data-en="Contact" data-es="Contacto">Contacto</a>
                 </li>
             </ul>
-            <TranslateButton></TranslateButton>
+            <!-- Language toggle button (for desktop) -->
         </div>
+        <TranslateButton></TranslateButton>
+    </div>
+
+    <!-- Mobile dropdown menu -->
+    <div class="hidden md:hidden bg-gray-800" id="mobile-menu" >
+        <ul class="font-medium p-4 mt-4 border rounded-lg">
+            <li>
+                <a href="#" class="block py-2 px-3 text-white rounded md:bg-transparent md:text-verdeagua md:p-0 md:dark:text-blue-500" data-translate data-en="Home" data-es="Inicio">Inicio</a>
+            </li>
+            <li>
+                <a href="#SobreMi" class="block py-2 px-3 text-white-900 rounded hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700" data-translate data-en="About Me" data-es="Sobre mi">Sobre mi</a>
+            </li>
+            <li>
+                <a href="#Experiencia" class="block py-2 px-3 text-white-900 rounded hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700" data-translate data-en="Experience" data-es="Experiencia">Experiencia</a>
+            </li>
+            <li>
+                <a href="#Habilidades" class="block py-2 px-3 text-white-900 rounded hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700" data-translate data-en="Skills" data-es="Habilidades">Habilidades</a>
+            </li>
+            <li>
+                <a href="#Proyectos" class="block py-2 px-3 text-white-900 rounded hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700" data-translate data-en="Projects" data-es="Proyectos">Proyectos</a>
+            </li>
+            <li>
+                <a href="#Contacto" class="block py-2 px-3 text-white-900 rounded hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700" data-translate data-en="Contact" data-es="Contacto">Contacto</a>
+            </li>
+        </ul>
     </div>
 </nav>
+
+<script type="text/javascript">
+  // JavaScript to handle mobile menu toggle
+  document.addEventListener("DOMContentLoaded", function () {
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+      mobileMenuButton.addEventListener('click', function () {
+      mobileMenu.classList.toggle('hidden');
+    });
+  });
+</script>
