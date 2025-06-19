@@ -33,31 +33,39 @@ import WhatsappBubble from '../components/WhatsappBubble.astro';
 		</div>
 		<script type="text/javascript">
 			document.addEventListener("DOMContentLoaded", function () {
-			  const switchButton = document.getElementById('language-toggle');
-			  const elementsToTranslate = document.querySelectorAll('[data-translate]');
-		
-			  if (switchButton) {
-				switchButton.addEventListener('change', function () {
-				  const lang = switchButton.checked ? 'en' : 'es'; // 'es' para español, 'en' para inglés
-		
-				  elementsToTranslate.forEach((element) => {
-					const text = element.getAttribute(`data-${lang}`);
-					if (text) {
-					  element.textContent = text; // Actualiza el contenido dinámicamente
-					}
-				  });
-				  translatePlaceholders(lang);
-				});
-			  }
-			  function translatePlaceholders(language) {
-    			const inputs = document.querySelectorAll('input[data-translate]');
-
-    			inputs.forEach(input => {
-      			const placeholderText = input.getAttribute(`data-${language}`);
-      			input.placeholder = placeholderText;
-   			 	});
-  			}
-			});
+  const switchButton = document.getElementById('language-toggle');
+  const elementsToTranslate = document.querySelectorAll('[data-translate]');
+  
+  const defaultLang = 'en';
+  
+  if (switchButton) {
+    switchButton.checked = true;
+    updateTranslations(defaultLang);
+    switchButton.addEventListener('change', function () {
+      const lang = this.checked ? 'en' : 'es';
+      updateTranslations(lang);
+    });
+  }
+  
+  function updateTranslations(lang) {
+    elementsToTranslate.forEach((element) => {
+      const text = element.getAttribute(`data-${lang}`);
+      if (text) {
+        element.textContent = text;
+      }
+    });
+    
+    translatePlaceholders(lang);
+  }
+  
+  function translatePlaceholders(language) {
+    const inputs = document.querySelectorAll('input[data-translate]');
+    inputs.forEach(input => {
+      const placeholderText = input.getAttribute(`data-${language}`);
+      input.placeholder = placeholderText;
+    });
+}
+	});
 			
 		  </script>
 		<WhatsappBubble></WhatsappBubble>
