@@ -1,89 +1,100 @@
+---
+import GithubIcon from "./icons/GithubIcon.astro";
+---
+
 <h1 class="opacity-70 text-4xl text-gray-200 pl-10 " data-translate data-en="Projects" data-es="Proyectos">Proyectos</h1>
-<div class="flex flex-row gap-5 flex-wrap justify-start mt-16">
-    <div class="w-[23rem] min-w-[23rem] bg-[#3C3C3B] border border-verdeagua rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 gap-5">
-        <a href="#">
-            <img class="rounded-t-lg" src="/ProyectoImagine.png" alt="" />
-        </a>
-        <div class="p-5">
-            <a href="#">
-                <h5 class="mb-2 text-[18px] font-bold tracking-tight text-verdeagua dark:text-white" data-translate data-en="Imagine" data-es="Imagine">Imagine</h5>
-            </a>
-            <p class="mb-3 font-normal text-gray-400 dark:text-gray-400" data-translate 
-               data-en="E-commerce website where Imagine customers can search and purchase their favorite paintings."
-               data-es="Pagina web ecommerce en la que los clientes de Imagine podrán buscar y hacer la compra de sus pinturas favoritas">
-               Pagina web ecommerce en la que los clientes de Imagine podrán buscar y hacer la compra de sus pinturas favoritas
-            </p>
-            <a href="#" class="w-1/2 inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-verdeagua rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                Github
-                <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
-                </svg>
-            </a>
+<div class="flex flex-row gap-5 flex-wrap lg:justify-start justify-center mt-16">
+    <div class="w-[23rem] min-w-[23rem] h-[30rem] min-h-[30rem] bg-[#3C3C3B] border border-verdeagua rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 gap-5">
+        <div class="h-1/2 bg-[url('/ProyectoImagine.png')] bg-no-repeat bg-center bg-cover rounded-t-lg">
         </div>
+            <div class="p-5 h-1/2">
+                <div class="h-1/4">
+                        <h5 class="mb-2 text-[18px] font-bold tracking-tight text-verdeagua dark:text-white" data-translate data-en="Imagine" data-es="Imagine">Imagine</h5>
+                </div>
+                <div class="h-2/4 ">
+                    <p class="mb-3 font-normal text-gray-400 dark:text-gray-400" data-translate 
+                    data-en="E-commerce website where Imagine customers can search and purchase their favorite paintings."
+                    data-es="Pagina web ecommerce en la que los clientes de Imagine podrán buscar y hacer la compra de sus pinturas favoritas">
+                    Pagina web ecommerce en la que los clientes de Imagine podrán buscar y hacer la compra de sus pinturas favoritas
+                    </p>
+                </div>
+                <div class="flex gap-3 h-1/4">
+                    <a href="https://github.com/J0sePaBl0/imagine" class="w-1/3 justify-center px-2 py-2 inline-flex items-center text-sm font-medium text-center text-white bg-verdeagua rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                        Github
+                        <GithubIcon/>
+                    </a>
+                    <a href="https://imagine-j13q.vercel.app/" class="w-1/3 px-2 py-2 inline-flex items-center justify-center text-sm font-medium text-center text-white bg-verdeagua rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                        Web
+                    <svg width="25px" height="25px" viewBox="-2.4 -2.4 28.80 28.80" xmlns="http://www.w3.org/2000/svg" fill="#ffffff" stroke="#ffffff" stroke-width="0.00024000000000000003"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M20.501 6.028V6h-.02A10.28 10.28 0 0 0 4.519 6H4.5v.028a10.262 10.262 0 0 0 0 12.944V19h.02a10.28 10.28 0 0 0 15.962 0h.021v-.028a10.262 10.262 0 0 0 0-12.944zM13 6V3.272A4.533 4.533 0 0 1 15.54 6zm2.935 1a16.827 16.827 0 0 1 .853 5H13V7zM12 3.272V6H9.46A4.533 4.533 0 0 1 12 3.272zM12 7v5H8.212a16.827 16.827 0 0 1 .853-5zm-4.787 5H3.226a9.234 9.234 0 0 1 1.792-5h2.984a17.952 17.952 0 0 0-.79 5zm0 1a17.952 17.952 0 0 0 .789 5H5.018a9.234 9.234 0 0 1-1.792-5zm1 0H12v5H9.065a16.827 16.827 0 0 1-.853-5zM12 19v2.728A4.533 4.533 0 0 1 9.46 19zm1 2.728V19h2.54A4.533 4.533 0 0 1 13 21.728zM13 18v-5h3.788a16.827 16.827 0 0 1-.853 5zm4.787-5h3.987a9.234 9.234 0 0 1-1.792 5h-2.984a17.952 17.952 0 0 0 .79-5zm0-1a17.952 17.952 0 0 0-.789-5h2.984a9.234 9.234 0 0 1 1.792 5zm1.352-6h-2.501a8.524 8.524 0 0 0-1.441-2.398A9.306 9.306 0 0 1 19.139 6zM9.803 3.602A8.524 8.524 0 0 0 8.363 6H5.86a9.306 9.306 0 0 1 3.942-2.398zM5.861 19h2.501a8.524 8.524 0 0 0 1.441 2.398A9.306 9.306 0 0 1 5.861 19zm9.336 2.398A8.524 8.524 0 0 0 16.637 19h2.502a9.306 9.306 0 0 1-3.942 2.398z"></path><path fill="none" d="M0 0h24v24H0z"></path></g></svg>
+                    </a>
+                </div>
+            </div>
+        
     </div>
-    <div class="w-[23rem] min-w-[23rem] bg-[#3C3C3B] border border-verdeagua rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 gap-5">
-        <a href="https://github.com/J0sePaBl0/Proyecto">
-            <img class="rounded-t-lg" src="/ProyectoRobots.webp" alt="" />
-        </a>
-        <div class="p-5">
-            <a href="https://github.com/J0sePaBl0/Proyecto">
-                <h5 class="mb-2 text-[18px] font-bold tracking-tight text-verdeagua dark:text-white" data-translate data-en="Botland" data-es="Botland">Botland</h5>
-            </a>
-            <p class="mb-3 font-normal text-gray-400 dark:text-gray-400" data-translate 
-               data-en="An application where users can buy bots of different types for their specific needs."
-               data-es="Aplicación en la que el usuario puede comprar robots de diferentes tipos para las necesidades que el mismo requiera.">
-               Aplicación en la que el usuario puede comprar robots de diferentes tipos para las necesidades que el mismo requiera.
-            </p>
-            <a href="https://github.com/J0sePaBl0/Proyecto" class="w-1/2 inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-verdeagua rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                Github
-                <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
-                </svg>
-            </a>
+    <div class="w-[23rem] min-w-[23rem] h-[30rem] min-h-[30rem] bg-[#3C3C3B] border border-verdeagua rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 gap-5">
+        <div class=" h-1/2 bg-[url('/ProyectoRobots.webp')] bg-no-repeat bg-center bg-cover rounded-t-lg">
+        </div>
+        <div class="p-5 h-1/2">
+            <div class="h-1/4">
+                    <h5 class="mb-2 text-[18px] font-bold tracking-tight text-verdeagua dark:text-white" data-translate data-en="Botland" data-es="Botland">Botland</h5>
+            </div>
+            <div class="h-2/4">
+                <p class="mb-3 font-normal text-gray-400 dark:text-gray-400" data-translate 
+                data-en="An application where users can buy bots of different types for their specific needs."
+                data-es="Aplicación en la que el usuario puede comprar robots de diferentes tipos para las necesidades que el mismo requiera.">
+                Aplicación en la que el usuario puede comprar robots de diferentes tipos para las necesidades que el mismo requiera.
+                </p>
+            </div>
+            <div class=" h-1/4">
+                <a href="https://github.com/J0sePaBl0/Proyecto" class="w-1/3 inline-flex items-center justify-center px-3 py-2 text-sm font-medium text-center text-white bg-verdeagua rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                    Github
+                    <GithubIcon/>
+                </a>
+            </div>
         </div>
     </div>
 
-    <div class="w-[23rem] min-w-[23rem] bg-[#3C3C3B] border border-verdeagua rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 gap-5">
-        <a href="https://github.com/Unxpected155/QuitSmoke-FrontEnd">
-            <img class="rounded-t-lg" src="/QuitSmoke.webp" alt="" />
-        </a>
-        <div class="p-5">
-            <a href="https://github.com/Unxpected155/QuitSmoke-FrontEnd">
+    <div class="w-[23rem] min-w-[23rem] h-[30rem] min-h-[30rem] bg-[#3C3C3B] border border-verdeagua rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 gap-5">
+        <div class="h-1/2 bg-[url('/QuitSmoke.webp')] bg-no-repeat bg-center bg-cover rounded-t-lg"></div>
+        <div class="p-5 h-1/2">
+            <div class="h-1/4">
                 <h6 class="mb-2 text-[18px] font-bold tracking-tight text-verdeagua dark:text-white" data-translate data-en="Quitsmoke" data-es="Quitsmoke">Quitsmoke</h6>
-            </a>
-            <p class="mb-3 font-normal text-gray-400 dark:text-gray-400" data-translate 
+            </div>
+            <div class="h-2/4">
+                <p class="mb-3 font-normal text-gray-400 dark:text-gray-400" data-translate 
                data-en="An application aimed at reducing a person's cigarette consumption to improve health."
                data-es="Aplicación realizada con el objetivo de reducir el consumo de cigarrillos de una persona, mejorar la salud.">
                Aplicación realizada con el objetivo de reducir el consumo de cigarrillos de una persona, mejorar la salud.
             </p>
-            <a href="https://github.com/Unxpected155/QuitSmoke-FrontEnd" class="w-1/2 inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-verdeagua rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                Github
-                <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
-                </svg>
-            </a>
+            </div>
+            <div class="h-1/4">
+                <a href="https://github.com/Unxpected155/QuitSmoke-FrontEnd" class="w-1/3 inline-flex items-center justify-center px-3 py-2 text-sm font-medium text-center text-white bg-verdeagua rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                    Github
+                    <GithubIcon/>
+                </a>
+            </div>
         </div>
     </div>
 
-    <div class="w-[23rem] min-w-[23rem] bg-[#3C3C3B] border border-verdeagua rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 gap-5">
-        <a href="#">
-            <img class="rounded-t-lg" src="/ProyectoSistemas.webp" alt="" />
-        </a>
-        <div class="p-5">
-            <a href="#">
+    <div class="w-[23rem] min-w-[23rem] h-[30rem] min-h-[30rem] bg-[#3C3C3B] border border-verdeagua rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 gap-5">
+        <div class="h-1/2 bg-[url('/ProyectoSistemas.webp')] bg-no-repeat bg-center bg-cover rounded-t-lg"></div>
+        <div class="p-5 h-1/2">
+            <div class="h-1/4">
                 <h5 class="mb-2 text-[18px] font-bold tracking-tight text-verdeagua dark:text-white" data-translate data-en="OS Project" data-es="OS Project">OS Project</h5>
-            </a>
-            <p class="mb-3 font-normal text-gray-400 dark:text-gray-400" data-translate 
-               data-en="A web application created to inform about the topics to be addressed in an IT networks project."
-               data-es="Aplicación web realizada con el fin de informar sobre qué temas iba a tratar y abordar un proyecto de redes de informática.">
-               Aplicación web realizada con el fin de informar sobre qué temas iba a tratar y abordar un proyecto de redes de informática.
-            </p>
-            <a href="#" class="w-1/2 inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-verdeagua rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                Github
-                <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
-                </svg>
-            </a>
+            </div>
+            <div class="h-2/4">
+                <p class="mb-3 font-normal text-gray-400 dark:text-gray-400" data-translate 
+                data-en="A web application created to inform about the topics to be addressed in an IT networks project."
+                data-es="Aplicación web realizada con el fin de informar sobre qué temas iba a tratar y abordar un proyecto de redes de informática.">
+                Aplicación web realizada con el fin de informar sobre qué temas iba a tratar y abordar un proyecto de redes de informática.
+                </p>
+            </div>
+            <div class="h-1/4">
+                <a href="#" class="w-1/3 inline-flex items-center px-3 py-2 text-sm font-medium text-center justify-center text-white bg-verdeagua rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                    Github
+                    <GithubIcon/>
+                </a>
+            </div>
         </div>
     </div>
    
